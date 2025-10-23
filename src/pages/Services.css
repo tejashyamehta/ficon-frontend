@@ -1,0 +1,225 @@
+.services-container {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 2rem 0;
+}
+
+.services-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 4rem;
+  padding: 0 2rem;
+}
+
+/* Sidebar Styles - Static positioning */
+.services-sidebar {
+  background: transparent;
+  padding: 2rem 1rem;
+  height: fit-content;
+  position: static;
+}
+
+.sidebar-header h2 {
+  color: #1e40af;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header-underline {
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.service-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.service-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.service-btn:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  color: #1e40af;
+  transform: translateX(2px);
+}
+
+.service-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-color: #1d4ed8;
+  color: white;
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.service-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Main Content Styles - No boxes or borders */
+.services-content {
+  background: transparent;
+  padding: 2rem 0;
+}
+
+.content-sections {
+  margin-bottom: 3rem;
+}
+
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  color: #1e40af;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.section-underline {
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+  width: 120px;
+}
+
+.subsections {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.subsection {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.subsection-title {
+  color: #1e40af;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.subsection-description {
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Remove old styles that created boxes */
+.service-section,
+.service-items,
+.service-item,
+.bullet,
+.service-process,
+.process-steps,
+.step,
+.step-number,
+.content-header,
+.content-intro,
+.content-description,
+.content-footer,
+.cta-section,
+.cta-buttons,
+.cta-btn,
+.sidebar-actions,
+.action-btn {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-sidebar {
+    position: static;
+    padding: 1.5rem 0;
+  }
+
+  .service-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 1rem 0;
+  }
+
+  .services-layout {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .services-content {
+    padding: 1rem 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .service-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .service-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-sidebar {
+    padding: 1rem 0;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .subsection-title {
+    font-size: 1.1rem;
+  }
+
+  .service-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .service-icon {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,97 @@
+.products {
+  padding: 40px 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.product-category {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 4px;
+  border-left: 4px solid #e74c3c;
+}
+
+.product-category h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.product-category ul {
+  list-style: none;
+}
+
+.product-category li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+.product-category li:last-child {
+  border-bottom: none;
+}
+
+.brands-section {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.brands-section h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.brand-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #2c3e50;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .brands-section {
+    padding: 30px 20px;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

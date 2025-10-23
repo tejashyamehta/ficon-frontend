@@ -1,0 +1,300 @@
+.hero {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 60px 0;
+  position: relative; /* create its own stacking context */
+  z-index: 0;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.services-overview {
+  background-color: #fff;
+  padding: 60px 0;
+  position: relative;
+  z-index: 10; /* ensure it sits above any overlapping elements */
+  isolation: isolate; /* prevent ancestor z-index from covering children */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.service-item {
+  text-align: left;
+  padding: 16px;
+  border: 1px solid #e2e8f0; /* gray-200 */
+  border-radius: 8px;
+  background: #f8fafc; /* gray-50 */
+  display: block !important; /* Ensure the service cards are visible and not hidden by overlays */
+}
+
+.service-icon {
+  font-size: 44px;
+  color: #2563eb; /* blue-600 */
+  margin-bottom: 12px;
+  display: block;
+}
+
+.service-item h3 {
+  font-size: 20px;
+  color: #1e40af;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Ensure bullets and text are visible regardless of resets */
+.service-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  list-style-position: outside;
+}
+
+.service-list li {
+  display: list-item !important;
+  color: #0f172a; /* slate-900 for stronger contrast */
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0.15rem 0;
+}
+
+/* Force bullets and readable text */
+.services-overview .service-list {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.services-overview .service-list li {
+  display: list-item !important;
+  color: #0f172a !important; /* strong contrast */
+  opacity: 1 !important;
+  visibility: visible !important;
+  line-height: 1.65;
+  margin: 0.15rem 0;
+}
+
+/* Optional: colored bullets for clarity */
+.services-overview .service-list li::marker {
+  color: #2563eb;
+}
+
+.why-choose-us {
+  background-color: #f8fafc;
+  padding: 60px 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.features-list {
+  display: grid;
+  gap: 25px;
+}
+
+.feature h4 {
+  font-size: 18px;
+  color: #1e40af;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.feature p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.industries {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.industries-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.industries-intro {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.industries-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+.industry-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.industry-column li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.industry-column li:before {
+  content: "•";
+  color: #3b82f6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.industry-column li:last-child {
+  border-bottom: none;
+}
+
+.cta {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.cta-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: #e0f2fe;
+}
+
+.cta .btn {
+  background-color: white;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.cta .btn:hover {
+  background-color: #f0f9ff;
+  transform: translateY(-2px);
+}
+
+/* Resilient bullet-style points that don't rely on ul/li */
+.points {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.point {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 8px;
+  color: #0f172a !important; /* strong contrast */
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.point::before {
+  content: "•";
+  color: #2563eb;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .hero-content,
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-icon {
+    font-size: 40px;
+  }
+
+  .service-item h3 {
+    font-size: 18px;
+  }
+
+  .industries-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 26px;
+  }
+}

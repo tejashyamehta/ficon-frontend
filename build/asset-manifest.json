@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ficon-frontend/static/css/main.916077c5.css",
+    "main.js": "/ficon-frontend/static/js/main.dddfc29e.js",
+    "index.html": "/ficon-frontend/index.html",
+    "main.916077c5.css.map": "/ficon-frontend/static/css/main.916077c5.css.map",
+    "main.dddfc29e.js.map": "/ficon-frontend/static/js/main.dddfc29e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.916077c5.css",
+    "static/js/main.dddfc29e.js"
+  ]
+}

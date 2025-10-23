@@ -23,7 +23,11 @@ const Navbar = () => {
       <div className="container">
         <div className="nav-content">
           <Link to="/" className="nav-brand" aria-label="FICON Systems Home">
-            <img src="/images/ficon-logo.png" alt="FICON Systems" className="logo-img" />
+            <img
+              src={process.env.PUBLIC_URL + "/images/ficon-logo.png"}
+              alt="FICON Systems"
+              className="logo-img"
+            />
           </Link>
 
           <div className={`nav-menu ${isOpen ? "nav-menu-open" : ""}`}>
